@@ -13,9 +13,8 @@ app.get('/', (req: Request, res: Response) => {
 app.use(
   '/api',
   createProxyMiddleware({
-    target: process.env.API_URL, // your .NET API
+    target: process.env.API_URL,
     changeOrigin: true,
-    pathRewrite: { '^/api': '' }, // remove /api prefix before forwarding
   })
 );
 

@@ -15,7 +15,6 @@ app.use(
   createProxyMiddleware({
     target: process.env.API_URL,
     changeOrigin: true,
-    pathRewrite: { '^/api': '' }, // remove /api prefix
   })
 );
 
